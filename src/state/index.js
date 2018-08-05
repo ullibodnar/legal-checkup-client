@@ -1,14 +1,6 @@
-import { testCount } from './actions'
-import { TEST_COUNT } from './constants'
-import rootEpic from './epics'
-import { initialState, rootReducer } from './reducers'
-import { getTestCount } from './selectors'
+import { todoAdded } from './actions'
+import { initialState, TODO_ADDED } from './constants'
+import { rootReducer } from './reducers'
+import { getTodos } from './selectors'
 
-export {
-  getTestCount,
-  rootEpic,
-  initialState,
-  rootReducer,
-  TEST_COUNT,
-  testCount
-}
+export { getTodos, initialState, rootReducer, TODO_ADDED, todoAdded }

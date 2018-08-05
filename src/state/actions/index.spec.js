@@ -1,11 +1,14 @@
-import { testCount } from '.'
-import { TEST_COUNT } from '../'
+import { todoAdded } from '.'
+import { TODO_ADDED } from '..'
 
-describe('state:actions', () => {
-  describe('testCount', () => {
-    it(`creates a ${TEST_COUNT} action`, () => {
-      expect(testCount()).toMatchObject({
-        type: TEST_COUNT
+describe('actions', () => {
+  describe('todoAdded', () => {
+    it('creates a todoAdded action with the correct payload', () => {
+      const todo = 'This is a todo'
+
+      expect(todoAdded(todo)).toMatchObject({
+        type: TODO_ADDED,
+        payload: { todo }
       })
     })
   })

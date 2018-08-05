@@ -1,19 +1,19 @@
-import { TEST_COUNT } from '..'
+import { isEmpty } from 'ramda'
 
-const initialState = {
-  count: 0
-}
+import { initialState, TODO_ADDED } from '..'
 
 function rootReducer (state = initialState, { payload = {}, type }) {
   switch (type) {
-    case TEST_COUNT:
-      return {
-        ...state,
-        count: state.count + 1
-      }
+    case TODO_ADDED:
+      return isEmpty(payload)
+        ? state
+        : {
+          ...state,
+          todos: [...state.todos, payload]
+        }
     default:
       return state
   }
 }
 
-export { initialState, rootReducer }
+export { rootReducer }

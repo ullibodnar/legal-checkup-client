@@ -9,7 +9,7 @@ import {
   routerMiddleware
 } from 'connected-react-router'
 import { applyMiddleware, compose, createStore } from 'redux'
-import { createEpicMiddleware } from 'redux-observable'
+// import { createEpicMiddleware } from 'redux-observable'
 import { createBrowserHistory } from 'history'
 import { Route, Switch } from 'react-router'
 import { ApolloProvider } from 'react-apollo'
@@ -18,24 +18,23 @@ import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 
 import baseStyles from './styles'
-import { initialState, rootEpic } from './state'
+// import { rootEpic } from './state'
 import { rootReducer } from './state/reducers'
 import registerServiceWorker from './registerServiceWorker'
 
 import { Checkup, Home, PrivacyPolicy, TermsOfUse } from './pages'
 
 const history = createBrowserHistory()
-const epicMiddleware = createEpicMiddleware()
+// const epicMiddleware = createEpicMiddleware()
 const store = createStore(
   connectRouter(history)(rootReducer),
-  initialState,
   compose(
-    applyMiddleware(routerMiddleware(history), epicMiddleware),
+    applyMiddleware(routerMiddleware(history) /* , epicMiddleware */),
     window && window.devToolsExtension && window.devToolsExtension()
   )
 )
 
-epicMiddleware.run(rootEpic)
+// epicMiddleware.run(rootEpic)
 
 const httpLink = new HttpLink({ uri: 'http://localhost:4000' })
 

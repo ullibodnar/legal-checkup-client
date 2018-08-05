@@ -1,9 +1,12 @@
-import { TEST_COUNT } from '../constants'
+import { TODO_ADDED } from '..'
 
-function testCount () {
+function todoAdded (todo) {
   return {
-    type: TEST_COUNT
+    type: TODO_ADDED,
+    payload: {
+      todo
+    }
   }
 }
 
-export { testCount }
+export { todoAdded }

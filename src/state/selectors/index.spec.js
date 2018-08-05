@@ -1,18 +1,14 @@
-import { getTestCount } from '.'
+import { getTodos } from './'
 
-describe('state:selectors', () => {
-  describe('getTestCount', () => {
-    it('returns the list of completed badges', () => {
-      const count = 3
-      const state = { rootReducer: { count } }
+describe('selectors', () => {
+  describe('getTodos', () => {
+    it('returns the todo list', () => {
+      const todos = [{ todo: 'first todo' }, { todo: 'second todo' }]
+      const state = {
+        todos
+      }
 
-      expect(getTestCount(state)).toBe(count)
-    })
-
-    it('returns undefined if no count value', () => {
-      const state = {}
-
-      expect(getTestCount(state)).toBeUndefined()
+      expect(getTodos(state)).toEqual(todos)
     })
   })
 })

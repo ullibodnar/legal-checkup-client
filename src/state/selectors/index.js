@@ -1,3 +1,3 @@
-export function getTestCount ({ rootReducer: { count } = {} }) {
-  return count
+export function getTodos ({ todos }) {
+  return todos
 }

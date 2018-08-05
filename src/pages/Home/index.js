@@ -1,15 +1,16 @@
 import React from 'react'
 
 import { Layout } from '../../components'
-import { TestButton } from '../../containers'
+import { Todo, TodoList } from '../../containers'
+
+const todos = [{ todo: 'first todo' }, { todo: 'second todo' }]
 
 export default function Home () {
   return (
     <Layout>
       <p>This is the Home page</p>
-      <p>
-        <TestButton />
-      </p>
+      <Todo />
+      <TodoList todos={todos} />
     </Layout>
   )
 }

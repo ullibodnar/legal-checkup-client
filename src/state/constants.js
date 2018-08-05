@@ -1,1 +1,9 @@
-export const TEST_COUNT = 'TEST_COUNT'
+export const initialState = {
+  todos: [
+    {
+      todo: 'Make a todo list'
+    }
+  ]
+}
+
+export const TODO_ADDED = 'TODO_ADDED'
