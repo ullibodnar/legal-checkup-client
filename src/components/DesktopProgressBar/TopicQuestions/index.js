@@ -1,10 +1,15 @@
 import React from 'react'
 
-import { StyledTopic, StyledQuestions, StyledQuestion } from '../style'
+import {
+  StyledTopic,
+  StyledQuestions,
+  StyledQuestion,
+  StyledTopicQuestions
+} from '../style'
 
 export default function TopicQuestions () {
   return (
-    <div>
+    <StyledTopicQuestions>
       <StyledTopic>Money</StyledTopic>
       <StyledQuestions>
         <StyledQuestion>1</StyledQuestion>
@@ -12,6 +17,6 @@ export default function TopicQuestions () {
         <StyledQuestion>3</StyledQuestion>
         <StyledQuestion>4</StyledQuestion>
       </StyledQuestions>
-    </div>
+    </StyledTopicQuestions>
   )
 }
