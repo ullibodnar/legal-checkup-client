@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+const StyledDesktopProgressBar = styled.nav`
+  display: flex;
+`
+StyledDesktopProgressBar.displayName = 'StyledDesktopProgressBar'
+
 const StyledNavButton = styled.button`
   width: 50px;
   height: 32px;
@@ -19,4 +24,30 @@ const StyledNavButtonForward = StyledNavButton.extend`
 `
 StyledNavButtonForward.displayName = 'StyledNavButtonForward'
 
-export { StyledNavButtonBack, StyledNavButtonForward }
+const StyledTopic = styled.div`
+  transform: rotate(-45deg);
+  width: 41px;
+  height: 31px;
+`
+StyledTopic.displayName = 'StyledTopic'
+
+const StyledQuestions = styled.ul`
+  list-style: none;
+  padding: 0;
+  background: #e0e0e0;
+`
+StyledQuestions.displayName = 'StyledQuestions'
+
+const StyledQuestion = styled.li`
+  display: inline-block;
+`
+StyledQuestion.displayName = 'StyledQuestion'
+
+export {
+  StyledDesktopProgressBar,
+  StyledNavButtonBack,
+  StyledNavButtonForward,
+  StyledTopic,
+  StyledQuestions,
+  StyledQuestion
+}
