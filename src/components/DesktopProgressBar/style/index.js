@@ -4,6 +4,8 @@ const StyledNavButton = styled.button`
   width: 50px;
   height: 32px;
   background-color: #ededed;
+  outline: none;
+  border: 0;
 `
 StyledNavButton.displayName = 'StyledNavButton'
 

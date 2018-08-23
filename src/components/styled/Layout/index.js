@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Layout = styled.section`
-  background-color: #eee;
+  background-color: #fff;
   color: #333;
 `
 Layout.displayName = 'StyledLayout'

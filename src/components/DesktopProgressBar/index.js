@@ -1,6 +1,14 @@
 import React from 'react'
-import NavButtons from './NavButtons'
+
+import { NavButtonBack, NavButtonForward } from './NavButtons'
+import TopicQuestions from './TopicQuestions'
 
 export default function DesktopProgressBar () {
-  return <NavButtons />
+  return (
+    <nav>
+      <NavButtonBack />
+      <TopicQuestions />
+      <NavButtonForward />
+    </nav>
+  )
 }

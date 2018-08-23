@@ -2,11 +2,12 @@ import React from 'react'
 
 import { StyledNavButtonForward, StyledNavButtonBack } from '../style'
 
-export default function NavButtons () {
-  return (
-    <div>
-      <StyledNavButtonBack>◀</StyledNavButtonBack>
-      <StyledNavButtonForward>►</StyledNavButtonForward>
-    </div>
-  )
+function NavButtonBack () {
+  return <StyledNavButtonBack>◀</StyledNavButtonBack>
 }
+
+function NavButtonForward () {
+  return <StyledNavButtonForward>►</StyledNavButtonForward>
+}
+
+export { NavButtonBack, NavButtonForward }
