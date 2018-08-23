@@ -1,7 +1,11 @@
 import React from 'react'
 
-import { Layout } from '../../components'
+import { Layout, DesktopProgressBar } from '../../components'
 
 export default function Checkup () {
-  return <Layout>This is the Checkup page</Layout>
+  return (
+    <Layout>
+      <DesktopProgressBar />
+    </Layout>
+  )
 }
