@@ -16,4 +16,4 @@ function getTopicList (state) {
   return pipe(getQuestions, values, map(getTopic), uniq)
 }
 
-export { getActiveQuestion, getQuestions }
+export { getActiveQuestion, getQuestions, getTopicList }
