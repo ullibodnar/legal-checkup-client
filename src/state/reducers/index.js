@@ -11,6 +11,7 @@ function rootReducer (state = initialState, { payload = {}, type }) {
           ...state,
           todos: [...state.todos, payload]
         }
+
     default:
       return state
   }

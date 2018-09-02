@@ -1,9 +1,5 @@
 export const initialState = {
-  todos: [
-    {
-      todo: 'Make a todo list'
-    }
-  ]
+  todos: []
 }
 
 export const TODO_ADDED = 'TODO_ADDED'
